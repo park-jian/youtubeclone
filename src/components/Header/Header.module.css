@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  background-color: yellow;
+  
+}
+.hambugerBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: white;
+}
+.hambugerBtn:hover {
+  background-color: antiquewhite;
+}
+
+.input {
+  width: 500px;
+  height: 30px;
+}
+.avatar {
+  height: 32px;
+  width: 40px;
+  border-radius: 20px;
+}
