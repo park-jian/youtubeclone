@@ -1,15 +1,18 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import Sidebar from './components/Sidebar/Sidebar';
 import SearchHeader from './components/SearchHeader';
+import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
+import { YoutubeApiProvider } from './context/YoutubeApiContext';
 
-
+const queryClient = new QueryClient();
 function App() {
   return <>
     <SearchHeader />
-    <Sidebar />
-    <Outlet />
-    
+    <YoutubeApiProvider>
+      <QueryClientProvider client={queryClient}>
+        <Outlet />
+      </QueryClientProvider>
+    </YoutubeApiProvider>
   </>
 }
 
