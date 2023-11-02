@@ -7,8 +7,8 @@ import Youtube from "../api/youtube";
 export const YoutubeApiContext = createContext(); //실제 데이터
 
 //인스턴스 생성
-const client = new FakeYoutubeClient(); //mockdata
-//const client = new YoutubeClient(); //실제 데이터
+//const client = new FakeYoutubeClient(); //mockdata
+const client = new YoutubeClient(); //실제 데이터
 const youtube = new Youtube(client);
 export function YoutubeApiProvider({ children }) {
   return (
